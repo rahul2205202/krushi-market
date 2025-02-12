@@ -1,0 +1,338 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  align-items: center;
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  width: 80%;
+  box-sizing: border-box;
+}
+.products-section {
+  margin-top: 20px; /* Add some spacing above the section */
+  margin: 4px 4px 4px;
+}
+
+.products-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd; /* Add a subtle line */
+  padding-bottom: 5px;
+}
+
+.product-list {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 15px;
+  margin: 4px 4px 4px;
+  border-radius: 5px; /* Slightly rounded corners */
+  display: flex; /* Use flexbox for layout */
+  column-gap: 10px;
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Distribute space between content and actions */
+}
+
+.product-item p {
+  margin: 5px 0; /* Add some spacing between paragraphs */
+}
+
+.product-actions {
+  display: flex; /* Use flexbox for buttons */
+}
+
+.edit-product-button,
+.delete-product-button {
+  padding: 8px 12px;
+  margin-left: 5px; /* Add some space between buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em; /* Slightly smaller font */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.edit-product-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.delete-product-button {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.edit-product-button:hover,
+.delete-product-button:hover {
+  opacity: 0.8; /* Slightly transparent on hover */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 600px) {
+  .product-item {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: flex-start; /* Align items to the left */
+  }
+
+  .product-actions {
+      margin-top: 10px; /* Add some space above the buttons */
+      flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .edit-product-button,
+  .delete-product-button {
+      margin: 5px 0; /* Add margin top/bottom for stacked buttons */
+      width: 100%; /* Make buttons full width */
+  }
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30px;
+  position: relative;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-upload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.image-upload-label:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.user-details {
+  margin-bottom: 15px;
+}
+
+.user-details p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.edit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.edit-profile-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.edit-product-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.edit-profile-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.edit-profile-form input,
+.edit-profile-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.save-button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #1e7e34;
+}
+
+.cancel-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #c12a36;
+}
+
+.edit-product-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.edit-product-form input,
+.edit-product-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.edit-product-form button { /* Style the update/cancel buttons */
+  background-color: #007bff; /* Example blue color */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px; /* Space between buttons */
+  transition: background-color 0.3s ease;
+}
+
+.edit-product-form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* ... (Rest of your CSS) ... */
+
+.add-product-button-container {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.add-product-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0;
+  transition: background-color 0.3s ease;
+}
+
+.add-product-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .profile-header {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+  }
+
+  .add-product-button-container {
+      margin-left: 0;
+      margin-top: 20px;
+  }
+
+  .profile-header, .edit-profile-form, .products-section {
+      width: 90%;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .products-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+  }
+
+  .product-item img {
+      height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-container {
+      padding: 20px;
+  }
+
+  .profile-header, .edit-profile-form, .products-section {
+      width: 95%;
+  }
+
+  .product-details {
+      padding: 15px;
+  }
+
+  .product-item img {
+      height: 180px;
+  }
+}

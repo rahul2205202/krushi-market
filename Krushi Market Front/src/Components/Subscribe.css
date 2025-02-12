@@ -1,0 +1,97 @@
+/* Subscribe.css */
+
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 400px; /* Adjust width as needed */
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.subscribe-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.form-group select {
+    width: calc(100% - 12px);
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    appearance: none; /* Remove default select arrow */
+    background-color: white; /* Set background color */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m19 9-7 7-7-7'/%3e%3c/svg%3e"); /* Add custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; /* Adjust padding for arrow */
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #80bdff; /* Highlight border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add a focus shadow */
+}
+
+
+.plan-description {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #777;
+    text-align: center; /* Center the description */
+}
+
+.plan-price {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: #333; /* Make price more prominent */
+}
+
+.subscribe-container button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make button full width */
+    margin-top: 1rem;
+}
+
+.subscribe-container button:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 500px) {
+    .subscribe-container {
+        width: 90%;
+    }
+}

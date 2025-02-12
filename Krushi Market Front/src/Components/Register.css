@@ -1,0 +1,131 @@
+/* Register.css */
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background-color: #f0f0f0;
+    padding: 1rem;
+}
+
+.register-box {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Increased width for better flexbox layout */
+    max-width: 95%;
+    box-sizing: border-box;
+}
+
+.register-box h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.register-form {  /* Add this to style the FORM */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically by default */
+    gap: 1rem; /* Spacing between elements */
+}
+
+
+.input-group {
+    display: flex; /* Make each input group a flex container */
+    align-items: center; /* Vertically align label and input */
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    width: 120px; /* Fixed width for labels (adjust as needed) */
+    margin-right: 1rem; /* Space between label and input */
+    color: #555;
+    text-align: right; /* Align labels to the right */
+}
+
+.input-group input {
+    flex-grow: 1; /* Allow input to take up remaining space */
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.register-box button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.register-box button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-box {
+        padding: 2rem;
+        width: 95%;
+    }
+
+    .register-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-group {
+        flex-direction: column; /* Stack label and input vertically on smaller screens */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    .input-group label {
+        width: auto; /* Reset label width */
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .input-group input,
+    .register-box button {
+        font-size: 0.95rem;
+    }
+.login-link {
+    text-align: center; /* Center the link */
+    margin-top: 1rem;  /* Add some spacing above the link */
+    font-size: 0.95rem;
+}
+
+.login-link a {
+    color: #007bff; /* Or your preferred link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.login-link a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+}
+
+@media (max-width: 400px) {
+    .register-box {
+        padding: 1.5rem;
+    }
+}
