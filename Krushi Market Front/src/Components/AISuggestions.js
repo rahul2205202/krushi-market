@@ -6,7 +6,7 @@ function KrushiMarketContent() {
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
     const [generatedText, setGeneratedText] = useState([]); // Array to store generated text line by line
-    const YOUR_API_KEY = 'AIzaSyD1bO2F4y0LjHUL6b60T5vAe4WJ6l3SG_w'; // Replace with your actual API key
+    const YOUR_API_KEY = ''; // Replace with your actual API key
 
     const generateContent = async () => {
         setLoading(true);
