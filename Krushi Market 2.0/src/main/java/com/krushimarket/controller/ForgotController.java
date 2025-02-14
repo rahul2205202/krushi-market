@@ -19,11 +19,11 @@ import com.twilio.rest.verify.v2.service.VerificationCheck;
 @RequestMapping("/user")
 public class ForgotController {
 
-    private String accountSid = "AC18f01ed1701d0e2d48f5515c9d2b7108";
+    private String accountSid = "";
 
-    private String authToken = "0172654d261581c9125fce378bb2b513";
+    private String authToken = "";
 
-    private String verifyServiceSid = "VAa95e5aef92acabb17f41401eb24a86b8";
+    private String verifyServiceSid = "";
     
     @Autowired
     private UserRepository userRepository;
@@ -45,7 +45,7 @@ public class ForgotController {
 
         try {
         	Verification verification = Verification.creator(
-                    "VAa95e5aef92acabb17f41401eb24a86b8",
+                    "",
                     "+91"+phoneNumber,
                     "sms")
                 .create();
@@ -67,7 +67,7 @@ public class ForgotController {
 
         try {
         	VerificationCheck verificationCheck = VerificationCheck.creator(
-                    "VAa95e5aef92acabb17f41401eb24a86b8")
+                    "")
                     .setTo("+91"+phoneNumber)
                     .setCode(otp)
                 .create();
