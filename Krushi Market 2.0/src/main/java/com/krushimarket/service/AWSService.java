@@ -24,7 +24,7 @@ public class AWSService {
 
     private final AmazonS3 s3Client;
     private final String bucketName = "krushimarket";
-    AWSCredentials credentials = new BasicAWSCredentials("AKIAYSE4OJY5DUY4IDPA", "IAdGwuNMZbkE0yjsXt8OP33GysDES0HFULUGKmsp");
+    AWSCredentials credentials = new BasicAWSCredentials("", "");
     public AWSService() {
         s3Client = AmazonS3ClientBuilder.standard()
         		.withCredentials(new AWSStaticCredentialsProvider(credentials))
