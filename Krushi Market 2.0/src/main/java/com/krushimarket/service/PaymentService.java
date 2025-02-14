@@ -36,9 +36,9 @@ public class PaymentService {
     @Autowired
     private ModelMapper mapper;
 
-    private String razorpayKeyId = "rzp_test_9ixpsXiv2GQ9fC";
+    private String razorpayKeyId = "";
 
-    private String razorpayKeySecret = "NMzMCWkHqzA43cUSi3ktupmy";
+    private String razorpayKeySecret = "";
 
     @Transactional
     public PaymentRequestDto processPayment(Long userId, PaymentRequestDto paymentRequestDto) throws RazorpayException {
