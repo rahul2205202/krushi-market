@@ -88,7 +88,7 @@ const Payment = () => {
             console.log("Payment Response from backend:", response.data);
 
             const options = {
-                key: "rzp_test_9ixpsXiv2GQ9fC", // Ensure this env variable is set!
+                key: "", // Ensure this env variable is set!
                 amount: response.data.amount * 100,
                 currency: 'INR',
                 name: 'Krushi Market',
